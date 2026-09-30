@@ -1,0 +1,21 @@
+# Second dummy .cursorrules for cancel-flow testing
+
+## TypeScript
+- Enable strict mode and never use the `any` type; use `unknown` and narrow it.
+- Prefer `const` over `let`; never use `var`.
+- Use named exports instead of default exports.
+
+## Error handling
+- Never swallow errors with an empty catch block; log or rethrow them.
+- Wrap all external API calls in try/catch and return typed error objects.
+
+## API design
+- All REST endpoints must return JSON with a consistent `{ data, error }` shape.
+- Use kebab-case for URL paths and camelCase for JSON fields.
+
+## Logging
+- Do not use console.log in production code; use the shared logger.
+- Never log passwords, tokens, or personal data.
+
+## Performance
+- Avoid N+1 database queries; batch or join instead.
